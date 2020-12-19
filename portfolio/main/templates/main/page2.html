@@ -1,0 +1,19 @@
+{% load static %}
+
+{% block page2 %}
+
+ <div class="page-2" id="page-2">
+        <div class="container">
+            <div class="row">
+                {% for el in gallery  %}
+
+                <div class="col-md-4">
+                    <img class="{{ el.photo_class }}" src="{{ el.photo.url }}" alt="picture 1">
+                    <img class="{{ el.photo_class2 }}" src="{{ el.photo2.url }}" alt="picture 4">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

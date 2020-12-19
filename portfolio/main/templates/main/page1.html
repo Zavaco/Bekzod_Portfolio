@@ -1,0 +1,51 @@
+{% load static %}
+
+{% block pag1 %}
+ <div class="page-1">
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img class="logo" src="{{ info_first.logo.url }}" alt="NB logo">
+
+                    </div>
+                    <div class="offset-md-5 col-md-5">
+                        <div class="menu">
+                            <ul class="top-menu" id="top-menu">
+                                  {% for el in menu %}
+                                <li class="mennu_item navbar-nav">
+                                    <a class="active" href="{{ el.menu_link }}">{{ el.menu_name }}</a>
+                                </li>
+                                {% endfor %}
+                                <!-- <li class="icon "><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="page-1_content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="content_text">
+                            <p>{{ info_first.info }}</p>
+                        </div>
+                    </div>
+                    <div class="offset-md-2 col-md-4">
+                        <img class="content_image" src="{{ info_first.profile_img.url }}" alt="Bekzod">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-1_btn">
+            <div class="container">
+                <div class="row">
+                    <a href="#page-2"><button class="btn">{{ info_first.head_btn }}</button></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

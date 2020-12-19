@@ -1,0 +1,47 @@
+{% load static %}
+
+{% block page3 %}
+
+<div class="page-3">
+        <div class="page-3_content">
+            <div class="container">
+                <div class="row">
+                    {% for el in info %}
+                    <div class="col-md-4">
+                        <img class="{{ el.photo_class }}" src="{{ el.foot_photo.url }}" alt="picture 7">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="content_left">
+                            <h2 class="h_2" >{{ info_first.quest }}</h2>
+                            <a href="portfolio.html"><button class="btn">{{ info_first.foot_btn }}</button></a>
+                        </div>
+                    </div>
+                    <div class="offset-md-5 col-md-4">
+                        <div class="content_right">
+                            {% for el in info %}
+                                {% if el.id < 4 %}
+                            <ul>
+                                <li class="li_1">
+                                    <img  src="{{ el.foot_icon.url }}" alt="mail">
+                                    <p>{{ el.foot_info }}</p>
+                                </li>
+                            </ul>
+                                    {% endif %}
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
